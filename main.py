@@ -21,7 +21,7 @@ with sync_playwright() as p:
 
     # Fill hours today
     today_day = date.today().day
-    page.locator(f"input[data-dia='{today_day}']").fill("8:00")
+    page.locator(f"tr input[data-dia='{today_day}']").first.fill("8:00")
 
     # To lose focus and save value
     page.locator("h1").click()
